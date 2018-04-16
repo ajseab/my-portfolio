@@ -7,7 +7,7 @@
   <link rel="stylesheet" type="text/css" href="css/ionicons.min.css">
   <link rel="stylesheet" type="text/css" href="css/style.css">
   <link rel="stylesheet" href="css/ionicons.min.css">
-  <title>Home | Avery Seabolt</title>
+  <title>avery seabolt</title>
 </head>
 
 <body>
@@ -16,14 +16,14 @@
     <nav class="main-nav">
       <div class="row flex-container">
         <div class="logo-container flex-container">
-          <h1><a href="index.html">AVERY SEABOLT</a></h1>
+          <h1><a href="#top" class="js--scroll-to-top">AS</a></h1>
         </div>
         <div class="nav-links flex-container">
           <ul>
             <li><a href="#about-me" class="js--scroll-to-about-me">about me</a></li>
-            <li><a href="work.html">work</a></li>
-            <li><a href="resume.html">resume</a></li>
-            <li><a href="contact.html">contact</a></li>
+            <li><a href="#work" class="js--scroll-to-work">work</a></li>
+            <li><a href="#resume" class="js--scroll-to-resume">resume</a></li>
+            <li><a href="#contact" class="js--scroll-to-contact">contact</a></li>
           </ul>
         </div>
       </div>
@@ -49,32 +49,58 @@
         <div class="selfie-caption">lover of music and coffee</div>
         <div class="selfie-caption">student based in Clovis, CA</div>
       </div>
-      <p class="about-me-copy">Hi! My name is Avery Seabolt. I am a senior attending Clovis High School (CHS) and the <a href="#">Center for Advanced Research and Technology (CART)</a>. I have taken many advanced and practical science and math courses at these two schools including AP Chemistry, AP Statistics, Robotics and Electronics, and Physics. I am currently enrolled in my most exciting class&mdash;Web Application Development at CART.</p>
-      <p class="about-me-copy">In my web application development class, I have learned practical skills in HTML, CSS, JavaScript, and responsive design. Although I had web technologies experience prior to taking this class, it has given me the opportunity to learn much more than I would have on my own and has put me in the position to collaborate on <a href="#">projects</a> with some of my like-minded peers.</p>
-      <p class="about-me-copy">If you were to meet me in person, likely the first thing I’d ask you is what your favorite music genre is, or if you play any instruments. This is because I am very passionate about music and the way it allows us to connect with each other in ways other mediums aren’t capable of doing. My favorite genre right now is indie pop/rock and recently I’ve been listening to Honne and Petit Biscuit.</p>
-      <p class="about-me-copy">If you need a website built or just want to chat about music, feel free to <a href="#">contact me</a></p>
-      <p class="about-me-copy"><a href="https://open.spotify.com/user/sea-bolt" target="_blank">Check out</a> my playlists and see what I’ve been listening to</p>
-      <p class="about-me-copy"><a href="https://www.linkedin.com/in/avery-seabolt/" target="_blank">Read</a> about my accomplishments and experience</p>
+      <p class="about-me-copy">Hi! My name is Avery Seabolt. I am a senior attending Clovis High School (CHS) and the <a href="https://cart.org" target="_blank">Center for Advanced Research and Technology (CART)</a>. I have taken many advanced and practical science and math courses
+        at these two schools including AP Chemistry, AP Statistics, Robotics and Electronics, and Physics. I am currently enrolled in my most exciting class&mdash;Web Application Development at CART.</p>
+      <p class="about-me-copy">In my web application development class, I have learned practical skills in HTML, CSS, JavaScript, and responsive design. Although I had web technologies experience prior to taking this class, it has given me the opportunity to learn much more than
+        I would have on my own and has put me in the position to collaborate on <a href="#projects" class="js--scroll-to-work">projects</a> with some of my like-minded peers.</p>
+      <p class="about-me-copy">If you were to meet me in person, likely the first thing I’d ask you is what your favorite music genre is, or if you play any instruments. This is because I am very passionate about music and the way it allows us to connect with each other in ways
+        other mediums aren’t capable of doing. My favorite genre right now is indie pop/rock and recently I’ve been listening to Honne and Petit Biscuit.</p>
+      <p class="about-me-copy">If you need a website built or just want to chat about music, feel free to <a href="#contact" class="js--scroll-to-contact">contact me</a>.</p>
+      <p class="about-me-copy"><a href="https://open.spotify.com/user/sea-bolt" target="_blank">Check out</a> my playlists and see what I’ve been listening to.</p>
+      <p class="about-me-copy"><a href="https://www.linkedin.com/in/avery-seabolt/" target="_blank">Read</a> about my accomplishments and experience.</p>
       <p class="about-me-copy">Thanks for visiting my portfolio!</p>
     </div>
   </section>
 
   <section class="section-work">
-
+    <div class="row">
+      <ul class="work-tabs">
+        <li data-tab="tab-projects" class="current">projects</li>
+        <li data-tab="tab-writing">writing</li>
+        <li data-tab="tab-other">other</li>
+      </ul>
+    </div>
   </section>
 
   <section class="section-resume">
 
   </section>
 
+  <section class="section-contact">
+    <div class="row">
+      <h2>contact me.</h2>
+      <div class="flex-container contact-container">
+        <form action="" class="contact-form">
+            <label for="name">name:</label>
+            <input type="text" name="name">
+            <label for="email">email:</label>
+            <input type="email">
+            <label for="message">message:</label>
+            <textarea name="message"></textarea>
+            <input type="submit" name="submit" value="send">
+        </form>
+      </div>
+    </div>
+  </section>
+
   <footer>
     <div class="row flex-container">
       <div class="social-links flex-container">
-          <ul>
-            <li><a href="https://www.linkedin.com/in/avery-seabolt/" target="_blank"><i class="ion-social-linkedin"></i></a></li>
-            <li><a href="https://github.com/ajseab" target="_blank"><i class="ion-social-github"></i></a></li>
-            <li><a href="https://www.instagram.com/averyseabolt/" target="_blank"><i class="ion-social-instagram"></i></a></li>
-          </ul>
+        <ul>
+          <li><a href="https://www.linkedin.com/in/avery-seabolt/" target="_blank"><i class="ion-social-linkedin"></i></a></li>
+          <li><a href="https://github.com/ajseab" target="_blank"><i class="ion-social-github"></i></a></li>
+          <li><a href="https://www.instagram.com/averyseabolt/" target="_blank"><i class="ion-social-instagram"></i></a></li>
+        </ul>
       </div>
       <div class="copyright flex-container">
         &copy; Avery Seabolt 2018
