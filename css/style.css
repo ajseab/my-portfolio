@@ -142,6 +142,10 @@ h1 a {
   width: auto;
 }
 
+#A {
+  fill: #fff !important;
+}
+
 /* --------------- MOBILE NAV -------------- */
 
 .ion-navicon {
@@ -460,8 +464,6 @@ footer .copyright {
 .contact-info div:first-child {
   margin-bottom: 10px;
 }
-
-
 
 /* --------------- ANIMATIONS ---------------- */
 
