@@ -66,13 +66,21 @@ h1 a {
 
 /* --------------- MAIN-NAV --------------- */
 
+.nav-scroll-background {
+  height: 90px;
+  width: 100%;
+  position: fixed;
+  background-color: #fff;
+  display: none;
+}
+
 .main-nav {
   position: fixed;
   top: 0;
-  background-color: #fff;
+  /* background-color: #fff; */
   width: 100%;
   color: #333;
-  /* color: #fff; */
+  color: #fff;
   height: 90px;
   transition: background-color 0.2s;
   display: inline-block;

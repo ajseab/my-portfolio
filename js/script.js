@@ -14,11 +14,13 @@ $(document).ready(function() {
     $("#" + tab_id).addClass("animate fadeIn");
   });
 
-  // $(window).scroll(function() {
-  //   if ($(this).scrollTop() > 500) {
-  //     $('.scroll-nav').fadeIn(500);
-  //   } else {
-  //     $('.scroll-nav').fadeOut(500);
-  //   }
-  // });
+  $(window).scroll(function() {
+    if ($(this).scrollTop() > 550) {
+      $('.nav-scroll-background').fadeIn(400);
+      $('.main-nav').css('color', '#333');
+    } else {
+      $('.nav-scroll-background').fadeOut(400);
+      $('.main-nav').css('color', '#fff');
+    }
+  });
 });
