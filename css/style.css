@@ -1,1 +1,213 @@
-$null
+/*
+
+primary color: #9c88ff
+light grey: #f5f6fa
+grey: #dcdde1
+dark grey: #2f3640
+dark blue: #353b48
+
+*/
+
+@import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600");
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  background-color: #fff;
+  color: #333;
+  font-family: "Source Sans Pro", sans-serif;
+  font-weight: 300;
+  font-size: 18px;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+section {
+  padding: 105px 0px;
+}
+
+/* --------------- REUSABLE -------------- */
+
+.row {
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+.group::after {
+	clear: both;
+	content: "";
+	display: block;
+}
+
+.flex-container {
+  display: flex;
+}
+
+/* --------------- PARAGRAPHS ------------- */
+
+p {
+  font-size: 17px;
+  line-height: 145%;
+}
+
+/* --------------- MAIN-NAV --------------- */
+
+.main-nav {
+  /* background-attachment: fixed; */
+  position: fixed;
+  top: 0;
+  background-color: #fff;
+  width: 100%;
+  color: #333;
+  height: 90px;
+  transition: background-color 0.2s;
+  display: inline-block;
+}
+
+.main-nav .logo-container {
+  width: 50%;
+  height: 90px;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.main-nav .logo-container a img {
+  height: 23px;
+  width: auto;
+}
+
+.main-nav .nav-links {
+  width: 50%;
+  height: 90px;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.main-nav .nav-links ul {
+  display: flex;
+  align-items: center;
+}
+
+.main-nav .nav-links ul li {
+  list-style: none;
+}
+
+.main-nav .nav-links ul li a {
+  margin: 0 0 0 30px;
+  padding-bottom: 5px;
+  color: inherit;
+  text-decoration: none;
+  transition: border-bottom-color 0.2s;
+  border-bottom: 2px solid rgba(255, 255, 255, 0);
+  font-size: 15px;
+}
+
+.main-nav .nav-links ul li a:hover, .main-nav .nav-links ul li a:active {
+  border-bottom-color: #4a69bd;
+}
+
+.main-nav .nav-links #name-logo {
+  margin: 0 30px;
+}
+
+.main-nav .nav-links #name-logo img {
+  height: 23px;
+  width: auto;
+}
+
+header {
+  width: 100vw;
+  height: 100vh;
+  margin-top: 90px;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url(https://static.pexels.com/photos/794079/pexels-photo-794079.jpeg);
+  background-position: center;
+  background-size: cover;
+}
+
+header .header-content {
+  height: 100vh;
+  width: 100%;
+  margin-top: -90px;
+}
+
+header .header-content.flex-container {
+  align-items: center;
+}
+
+header .text-container {
+  width: 50%;
+}
+
+header .header-content h2 {
+  font-size: 300%;
+}
+
+header .header-content p {
+  font-size: 125%;
+}
+
+.header-content .name {
+  font-weight: 600;
+  font-size: 95%;
+  border-bottom: dotted 1px #333;
+}
+
+header .header-content .btn {
+  display: inline-block;
+  margin-top: 15px;
+  font-weight: 600;
+  text-decoration: none;
+  color: #fff;
+  padding: 8px 15px;
+  border: solid 1px #4a69bd;
+  background-color: #4a69bd;
+  transition: color 0.2s, background 0.2s, border 0.2s;
+}
+
+header .header-content .btn:hover, header .header-text .btn:active {
+  background-color: #39539b;
+  color: #fff;
+  border-color: #39539b;
+}
+
+/* --------------- ABOUT ME -------------- */
+
+.selfie-container {
+  justify-content: center;
+}
+
+.selfie-caption-container {
+  margin-top: 30px;
+  flex-direction: column;
+  align-items: center;
+}
+
+.section-about-me img {
+  height: 200px;
+  width: auto;
+  border-radius: 50%;
+}
+
+.selfie-caption {
+  font-size: 15px;
+  font-style: italic;
+  margin-top: 2px;
+}
+
+.about-me-copy {
+  width: 60%;
+  margin: 0 auto;
+  margin-top: 30px;
+}
+
+.about-me-copy a {
+  text-decoration: none;
+  font-weight: 400;
+  color: #4a69bd;
+  border-bottom: 1px dotted #4a69bd;
+}
