@@ -76,14 +76,16 @@ h1 a {
 .main-nav {
   position: fixed;
   top: 0;
-  /* background-color: #fff; */
   width: 100%;
   color: #333;
   color: #fff;
   height: 90px;
-  transition: background-color 0.2s;
-  display: inline-block;
-  /* display: none; */
+  transition: background-color 0.3s;
+}
+
+.main-nav:hover {
+  background-color: #fff;
+  color: #333 !important;
 }
 
 .main-nav .logo-container {
@@ -280,11 +282,11 @@ header .header-content .btn:hover, header .header-text .btn:active {
 footer {
   height: 120px;
   color: #999;
-  background-color: #444;
+  background-color: #333;
 }
 
 footer .copyright {
-  font-size: 14px;
+  font-size: 13px;
   width: 33.33%;
   height: 120px;
   align-items: center;
@@ -330,7 +332,7 @@ footer .copyright {
 .contact-info {
   width: 33.33%;
   height: 120px;
-  font-size: 15px;
+  font-size: 14px;
   flex-direction: column;
   align-items: flex-end;
   justify-content: center;
