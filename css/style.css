@@ -62,7 +62,7 @@ h1 a {
   font-weight: 100;
 }
 
-/* --------------- MAIN-NAV --------------- */
+/* --------------- nav --------------- */
 
 .nav-scroll-background {
   height: 90px;
@@ -74,7 +74,7 @@ h1 a {
   z-index: 1000;
 }
 
-.main-nav {
+.nav {
   position: fixed;
   top: 0;
   width: 100%;
@@ -85,40 +85,43 @@ h1 a {
   z-index: 1000;
 }
 
-.main-nav:hover {
+.nav:hover {
   background-color: #fff;
+}
+
+.nav:hover, .nav:hover .ion-navicon {
   color: #333 !important;
 }
 
-.main-nav .logo-container {
+.nav .logo-container {
   width: 50%;
   height: 90px;
   justify-content: flex-start;
   align-items: center;
 }
 
-.main-nav .logo-container a img {
+.nav .logo-container a img {
   height: 23px;
   width: auto;
 }
 
-.main-nav .nav-links {
+.nav .nav-links {
   width: 50%;
   height: 90px;
   justify-content: flex-end;
   align-items: center;
 }
 
-.main-nav .nav-links ul {
+.nav .nav-links ul {
   display: flex;
   align-items: center;
 }
 
-.main-nav .nav-links ul li {
+.nav .nav-links ul li {
   list-style: none;
 }
 
-.main-nav .nav-links ul li a {
+.nav .nav-links ul li a {
   margin: 0 0 0 30px;
   padding-bottom: 3px;
   color: inherit;
@@ -128,22 +131,18 @@ h1 a {
   font-size: 15px;
 }
 
-.main-nav .nav-links ul li a:hover, .main-nav .nav-links ul li a:active {
+.nav .nav-links ul li a:hover, .nav .nav-links ul li a:active {
   border-bottom-color: #4a69bd;
   color: #4a69bd;
 }
 
-.main-nav .nav-links #name-logo {
+.nav .nav-links #name-logo {
   margin: 0 30px;
 }
 
-.main-nav .nav-links #name-logo img {
+.nav .nav-links #name-logo img {
   height: 23px;
   width: auto;
-}
-
-#A {
-  fill: #fff !important;
 }
 
 /* --------------- MOBILE NAV -------------- */
@@ -512,13 +511,13 @@ footer .copyright {
   .contact-form {
     width: 50%;
   }
-  /* .main-nav {
+  /* .nav {
     display: none;
   } */
-  .main-nav li {
+  .nav li {
     display: block;
   }
-  .main-nav li a:link, .main-nav li a:visited {
+  .nav li a:link, .nav li a:visited {
     display: block;
   }
   .about-me-copy {
@@ -542,5 +541,11 @@ footer .copyright {
   }
   header .text-container {
     width: 70%;
+  }
+  .main-nav {
+    display: none;
+  }
+  .mobile-nav {
+    display: block;
   }
 }

@@ -42,9 +42,11 @@ $(document).ready(function() {
     if ($(this).scrollTop() > 550) {
       $('.nav-scroll-background').fadeIn(400);
       $('.main-nav').css('color', '#333');
+      $('.ion-navicon').css('color', '#333');
     } else {
       $('.nav-scroll-background').fadeOut(400);
       $('.main-nav').css('color', '#fff');
+      $('.ion-navicon').css('color', '#fff');
     }
   });
 });
