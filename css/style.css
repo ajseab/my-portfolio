@@ -265,6 +265,10 @@ header .header-content .btn:hover, header .header-text .btn:active {
   border-bottom-color: #22325d;
 }
 
+.section-about-me .thank-you {
+  font-weight: 400;
+}
+
 /* --------------- WORK SECTION -------------- */
 
 .work-tabs {
