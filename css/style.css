@@ -162,6 +162,7 @@ p {
   text-align: center;
   top: 90px;
   background-color: rgba(255, 255, 255, 0.95);
+  display: none;
 }
 
 .mobile-nav-links ul li a {
@@ -579,6 +580,12 @@ footer .copyright {
   }
   .mobile-nav {
     display: block;
+  }
+  .nav-scroll-background {
+    display: block;
+  }
+  .mobile-nav {
+    color: #333;
   }
   .nav li {
     display: block;
