@@ -22,6 +22,7 @@ html, body {
   font-weight: 300;
   font-size: 18px;
   padding: 0;
+  text-rendering: optimizeLegibility;
   overflow-x: hidden;
 }
 
@@ -444,7 +445,7 @@ input[type=submit] {
   background-color: inherit;
   border: 1px solid #4a69bd;
   background-color: #4a69bd;
-  padding: 7px;
+  padding: 8px;
   transition: background-color 0.2s, border-color 0.2s;
   cursor: pointer;
 }
@@ -467,7 +468,7 @@ textarea {
 /* --------------- FOOTER -------------------- */
 
 footer {
-  height: 120px;
+  padding: 25px 0;
   color: #888;
   background-color: #222;
 }
@@ -475,14 +476,12 @@ footer {
 footer .copyright {
   font-size: 13px;
   width: 33.33%;
-  height: 120px;
   align-items: center;
   justify-content: center;
 }
 
 .social-links {
   width: 33.33%;
-  height: 120px;
   font-size: 15px;
   flex-direction: column;
   align-items: flex-start;
@@ -492,6 +491,10 @@ footer .copyright {
 .social-links ul li {
   display: inline-block;
   margin-right: 15px;
+}
+
+.social-links ul li:last-child {
+  margin: 0;
 }
 
 .social-links ul li a {
@@ -504,21 +507,14 @@ footer .copyright {
   transition: color 0.2s;
 }
 
-.ion-social-linkedin:hover, .ion-social-linkedin:active {
-  color: #4875B4;
-}
-
-.ion-social-github:hover, .ion-social-github:active {
-  color: #6e5494;
-}
-
+.ion-social-linkedin:hover, .ion-social-linkedin:active,
+.ion-social-github:hover, .ion-social-github:active,
 .ion-social-instagram:hover, .ion-social-instagram:active {
-  color: #c13584;
+  color: #4a69bd;
 }
 
 .contact-info {
   width: 33.33%;
-  height: 120px;
   font-size: 14px;
   flex-direction: column;
   align-items: flex-end;
@@ -603,17 +599,30 @@ footer .copyright {
   section {
     padding: 25px 0;
   }
-  .contact-form {
-    width: 100%;
-  }
-  .social-links, .copyright, .contact-info {
-    width: 100%;
-    flex-direction: column;
+  header .text-container {
+    width: 70%;
   }
   .about-me-copy {
     width: 100%;
   }
-  header .text-container {
-    width: 70%;
+  .contact-form {
+    width: 100%;
+  }
+  input[type=submit] {
+    padding: 9px;
+  }
+  footer {
+    padding: 30px;
+  }
+  footer .row {
+    flex-direction: column;
+    align-items: center;
+  }
+  .social-links, .copyright.flex-container, .contact-info {
+    width: 100%;
+    align-items: center;
+  }
+  .social-links, .copyright {
+    margin-bottom: 30px;
   }
 }

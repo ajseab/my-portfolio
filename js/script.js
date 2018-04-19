@@ -7,25 +7,25 @@ $(document).ready(function() {
 
   $('.js--scroll-to-about-me').click(function() {
     $('html, body').animate({
-      scrollTop: $('.section-about-me').offset().top
+      scrollTop: $('.section-about-me').offset().top-90
     }, 750);
   });
 
   $('.js--scroll-to-work').click(function() {
     $('html, body').animate({
-      scrollTop: $('.section-work').offset().top
+      scrollTop: $('.section-work').offset().top-90
     }, 750);
   });
 
   $('.js--scroll-to-resume').click(function() {
     $('html, body').animate({
-      scrollTop: $('.section-resume').offset().top
+      scrollTop: $('.section-resume').offset().top-90
     }, 750);
   });
 
   $('.js--scroll-to-contact').click(function() {
     $('html, body').animate({
-      scrollTop: $('.section-contact').offset().top
+      scrollTop: $('.section-contact').offset().top-90
     }, 750);
   });
 
@@ -39,7 +39,7 @@ $(document).ready(function() {
   });
 
   $(window).scroll(function() {
-    if ($(this).scrollTop() > 550 && $(window).width() > 750) {
+    if ($(this).scrollTop() > 570 && $(window).width() > 750) {
       $('.nav-scroll-background').fadeIn(400);
       $('.main-nav').css('color', '#333');
       $('.ion-navicon').css('color', '#333');
@@ -52,5 +52,9 @@ $(document).ready(function() {
 
   $("#hamburger").click(function() {
     $(".mobile-nav-links").slideToggle("slow", function() {});
+  });
+
+  $(".mobile-nav-links a").click(function() {
+    $(".mobile-nav-links").slideToggle("fast", function() {});
   });
 });
