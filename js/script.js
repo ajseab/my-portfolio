@@ -49,4 +49,12 @@ $(document).ready(function() {
       $('.ion-navicon').css('color', '#fff');
     }
   });
+
+  $(".mobile-nav-links").hide();
+  $("#hamburger").click(function() {
+      $('.nav-scroll-background').show();
+      $('.ion-navicon').css('color', '#333');
+    $(".mobile-nav-links").slideToggle("slow", function() {
+    });
+  });
 });
