@@ -356,9 +356,17 @@ header .header-content .btn:hover, header .header-text .btn:active {
 
 .tab-content .copy-container h3 {
   font-size: 23px;
-  letter-spacing: 1px;
-  margin-bottom: 15px;
+  margin-bottom: 20px;
   font-weight: 100;
+}
+
+.tab-content .copy-container h3:after {
+  display: block;
+  height: 2px;
+  background-color: #4a69bd;
+  content: " ";
+  width: 30px;
+  margin-top: 11px;
 }
 
 .tab-content>div {
@@ -557,6 +565,23 @@ footer .copyright {
   section {
     padding: 60px 0;
   }
+  .tab-content {
+    width: 100%;
+  }
+  .tab-content img {
+    width: 85%;
+  }
+  .tab-content .infographic {
+    height: auto;
+    width: 55%;
+  }
+  .tab-content .span-1-of-2 {
+    justify-content: center;
+    align-items: center;
+  }
+  .tab-content .copy-container {
+    width: 80%;
+  }
   .contact-form {
     width: 30%;
   }
@@ -592,6 +617,28 @@ footer .copyright {
   }
   .about-me-copy {
     width: 80%;
+  }
+  .tab-content img {
+    width: 100%;
+  }
+  .tab-content .infographic {
+    height: 300px;
+    width: auto;
+  }
+  .tab-content .row {
+    flex-direction: column;
+    padding: 0;
+  }
+  .tab-content .span-1-of-2:first-child {
+    width: 100%;
+    margin-top: 25px;
+  }
+  .tab-content div:first-child .span-1-of-2:first-child {
+    margin-top: 0;
+  }
+  .tab-content .copy-container {
+    width: 100%;
+    margin-top: 15px;
   }
 }
 
