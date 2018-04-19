@@ -401,6 +401,7 @@ input[type=submit]:hover {
 textarea {
   height: 100px;
   resize: none;
+  font-family: inherit;
 }
 
 /* --------------- FOOTER -------------------- */
@@ -515,9 +516,12 @@ footer .copyright {
   .contact-form {
     width: 50%;
   }
-  /* .nav {
+  .main-nav {
     display: none;
-  } */
+  }
+  .mobile-nav {
+    display: block;
+  }
   .nav li {
     display: block;
   }
@@ -545,11 +549,5 @@ footer .copyright {
   }
   header .text-container {
     width: 70%;
-  }
-  .main-nav {
-    display: none;
-  }
-  .mobile-nav {
-    display: block;
   }
 }
