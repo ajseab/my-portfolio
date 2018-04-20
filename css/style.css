@@ -136,15 +136,6 @@ p {
   color: #4a69bd;
 }
 
-.nav .nav-links #name-logo {
-  margin: 0 30px;
-}
-
-.nav .nav-links #name-logo img {
-  height: 23px;
-  width: auto;
-}
-
 /* --------------- MOBILE NAV -------------- */
 
 .ion-navicon {
@@ -645,6 +636,21 @@ footer .copyright {
 @media only screen and (max-width: 480px) {
   section {
     padding: 25px 0;
+  }
+  .nav-scroll-background,
+  .nav,
+  .nav .logo-container,
+  .nav .nav-links {
+    height: 60px;
+  }
+  .nav .logo-container a img {
+    height: 18px;
+  }
+  .ion-navicon {
+    font-size: 175%;
+  }
+  .mobile-nav-links {
+    top: 60px;
   }
   header .text-container {
     width: 70%;

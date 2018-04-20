@@ -1,4 +1,9 @@
 $(document).ready(function() {
+  let off = 90;
+  if ($(document).width() <= 480) {
+    off = 60;
+  }
+
   $('.js--scroll-to-top').click(function() {
     $('html, body').animate({
       scrollTop: $('header').offset().top
@@ -7,25 +12,25 @@ $(document).ready(function() {
 
   $('.js--scroll-to-about-me').click(function() {
     $('html, body').animate({
-      scrollTop: $('.section-about-me').offset().top-90
+      scrollTop: $('.section-about-me').offset().top-off
     }, 750);
   });
 
   $('.js--scroll-to-work').click(function() {
     $('html, body').animate({
-      scrollTop: $('.section-work').offset().top-90
+      scrollTop: $('.section-work').offset().top-off
     }, 750);
   });
 
   $('.js--scroll-to-resume').click(function() {
     $('html, body').animate({
-      scrollTop: $('.section-resume').offset().top-90
+      scrollTop: $('.section-resume').offset().top-off
     }, 750);
   });
 
   $('.js--scroll-to-contact').click(function() {
     $('html, body').animate({
-      scrollTop: $('.section-contact').offset().top-90
+      scrollTop: $('.section-contact').offset().top-off
     }, 750);
   });
 
