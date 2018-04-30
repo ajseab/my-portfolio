@@ -105,14 +105,14 @@
     <div class="row">
       <h2>contact me.</h2>
       <div class="flex-container contact-container">
-        <form action="contact-form.php" class="contact-form">
+        <form action="contact-form.php" method="POST" class="contact-form">
           <label for="name">*name:</label>
-          <input type="text" name="name">
+          <input type="text" name="name" value="">
           <label for="email">*email:</label>
           <input type="email" name="email">
           <label for="message">*message:</label>
           <textarea name="message"></textarea>
-          <input type="submit" name="submit" value="send">
+          <input type="submit" name="submit" value="send" id="#submit">
         </form>
       </div>
     </div>
