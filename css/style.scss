@@ -1,0 +1,658 @@
+/*
+Title: My Portfolio
+Author: Avery Seabolt
+*/
+
+//////////////////////////////////////////////////////////////////////////////
+// Variables
+//////////////////////////////////////////////////////////////////////////////
+
+$primary-color: #4a69bd;
+
+//////////////////////////////////////////////////////////////////////////////
+// Imports
+//////////////////////////////////////////////////////////////////////////////
+
+@import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600");
+
+//////////////////////////////////////////////////////////////////////////////
+// Basic Setup
+//////////////////////////////////////////////////////////////////////////////
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  background-color: #fff;
+  color: #333;
+  font-family: "Source Sans Pro", sans-serif;
+  font-weight: 300;
+  font-size: 18px;
+  padding: 0;
+  text-rendering: optimizeLegibility;
+  overflow-x: hidden;
+}
+
+*:focus {
+  outline: none;
+}
+
+section {
+  padding: 105px 0px;
+}
+
+//////////////////////////////////////////////////////////////////////////////
+// Reusable
+//////////////////////////////////////////////////////////////////////////////
+
+.row {
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+.group::after {
+  clear: both;
+  content: "";
+  display: block;
+}
+
+.flex-container {
+  display: flex;
+}
+
+.align-center {
+  text-align: center;
+}
+
+//////////////////////////////////////////////////////////////////////////////
+// Paragraphs
+//////////////////////////////////////////////////////////////////////////////
+
+p {
+  font-size: 17px;
+  line-height: 145%;
+}
+
+//////////////////////////////////////////////////////////////////////////////
+// Nav
+//////////////////////////////////////////////////////////////////////////////
+
+.nav-scroll-background {
+  height: 90px;
+  width: 100%;
+  position: fixed;
+  background-color: #fff;
+  display: none;
+  box-shadow: 0px -2px 10px #ddd;
+  z-index: 1000;
+}
+
+.nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  color: #333;
+  color: #fff;
+  height: 90px;
+  transition: background-color 0.3s;
+  z-index: 1000;
+  &:hover {
+    background-color: #fff;
+    &, .ion-navicon {
+      color: #333 !important;
+    }
+  }
+  .logo-container {
+    width: 50%;
+    height: 90px;
+    justify-content: flex-start;
+    align-items: center;
+    a {
+      img {
+        height: 23px;
+        width: auto;
+      }
+    }
+  }
+  .nav-links {
+    width: 50%;
+    height: 90px;
+    justify-content: flex-end;
+    align-items: center;
+    ul {
+      display: flex;
+      align-items: center;
+      li {
+        list-style: none;
+        a {
+          margin: 0 0 0 30px;
+          padding-bottom: 3px;
+          color: inherit;
+          text-decoration: none;
+          transition: border-bottom-color 0.2s, color 0.2s;
+          border-bottom: 1px solid rgba(255, 255, 255, 0);
+          font-size: 14px;
+          &:hover, &:active {
+            border-bottom-color: $primary-color;
+            color: $primary-color;
+          }
+        }
+      }
+    }
+  }
+}
+
+//////////////////////////////////////////////////////////////////////////////
+// Mobile Nav
+//////////////////////////////////////////////////////////////////////////////
+
+.ion-navicon {
+  font-size: 250%;
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+.mobile-nav {
+  display: none;
+}
+
+.mobile-nav-links {
+  position: fixed;
+  width: 100%;
+  text-align: center;
+  top: 90px;
+  background-color: rgba(255, 255, 255, 0.95);
+  display: none;
+  z-index: 999;
+  ul {
+    li {
+      a {
+        text-decoration: none;
+        color: #444;
+        font-size: 15px;
+        width: 100%;
+        display: block;
+        width: 100%;
+        height: 100%;
+        padding: 15px;
+        border-bottom: 1px solid #efefef;
+        transition: background-color 0.2s;
+        &:hover {
+          background-color: #efefef;
+        }
+      }
+    }
+  }
+}
+
+//////////////////////////////////////////////////////////////////////////////
+// Header
+//////////////////////////////////////////////////////////////////////////////
+
+header {
+  width: 100vw;
+  height: 100vh;
+  margin-top: 90px;
+  color: #fff;
+  background-attachment: fixed;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(../img/clouds-cold-fog-1005763-min.jpg);
+  background-position: center;
+  background-size: cover;
+  .header-content {
+    height: 100vh;
+    text-align: center;
+    width: 100%;
+    margin-top: -90px;
+    &.flex-container {
+      align-items: center;
+      justify-content: center;
+    }
+    h2 {
+      font-size: 500%;
+      font-weight: 100;
+    }
+    p {
+      font-size: 125%;
+    }
+    .name {
+      font-weight: 400;
+      font-size: 85%;
+      border-bottom: dotted 1px #fff;
+    }
+    .btn {
+      display: inline-block;
+      margin-top: 27px;
+      font-size: 15px;
+      text-decoration: none;
+      color: #fff;
+      padding: 8px 15px;
+      border: solid 1px #fff;
+      /* background-color: $primary-color; */
+      transition: color 0.2s, background 0.2s, border 0.2s;
+      &:hover, &:active {
+        background-color: #39539b;
+        color: #fff;
+        border-color: #39539b;
+      }
+    }
+  }
+  .text-container {
+    width: 50%;
+  }
+}
+
+//////////////////////////////////////////////////////////////////////////////
+// About Me Section
+//////////////////////////////////////////////////////////////////////////////
+
+.section-about-me {
+  background-color: #efefef;
+  .selfie-container {
+    justify-content: center;
+  }
+  .selfie-caption-container {
+    margin-top: 30px;
+    flex-direction: column;
+    align-items: center;
+    .selfie-caption {
+      font-size: 15px;
+      font-style: italic;
+      margin-top: 2px;
+    }
+  }
+  img {
+    height: 200px;
+    width: auto;
+    border-radius: 50%;
+  }
+}
+.about-me-copy {
+  width: 60%;
+  margin: 0 auto;
+  margin-top: 30px;
+  a {
+    text-decoration: none;
+    font-weight: 400;
+    color: $primary-color;
+    border-bottom: 1px dotted $primary-color;
+    transition: color 0.2s, border-bottom-color 0.2s;
+    &:hover, &:active {
+      color: #22325d;
+      border-bottom-color: #22325d;
+    }
+  }
+}
+.thank-you {
+  font-weight: 400;
+}
+
+//////////////////////////////////////////////////////////////////////////////
+// Work Section
+//////////////////////////////////////////////////////////////////////////////
+
+.section-work {
+  .work-tabs {
+    margin-bottom: 50px;
+    li {
+      display: inline-block;
+      margin-right: 9px;
+      font-size: 15px;
+      border: 1px solid #777;
+      padding: 8px 15px;
+      cursor: pointer;
+      transition: background-color 0.2s, border-color 0.2s, color 0.2s;
+      &:hover, &:active {
+        background-color: #889dd4;
+        border-color: #889dd4;
+        color: #fff;
+      }
+    }
+    .current {
+      border-color: #4a69bd !important;
+      background-color: #4a69bd !important;
+      color: #fff;
+    }
+  }
+  .tab-container {
+    .current {
+      display: inherit;
+    }
+  }
+}
+
+.tab-content {
+  display: none;
+  width: 90%;
+  margin: 0 auto;
+  img {
+    border: 1px solid #efefef;
+    width: 550px;
+  }
+  .infographic {
+    height: auto;
+    width: 60%;
+  }
+  .span-1-of-2 {
+    justify-content: center;
+    align-items: center;
+  }
+  .copy-container {
+    width: 70%;
+    h3 {
+      font-size: 23px;
+      margin-bottom: 20px;
+      font-weight: 100;
+      &:after {
+        display: block;
+        height: 2px;
+        background-color: #4a69bd;
+        content: " ";
+        width: 30px;
+        margin-top: 11px;
+      }
+    }
+  }
+  &>div {
+    margin-top: 40px;
+  }
+}
+
+//////////////////////////////////////////////////////////////////////////////
+// Resume Section
+//////////////////////////////////////////////////////////////////////////////
+
+.section-resume {
+  background-color: #efefef;
+  #resume-download {
+    text-decoration: none;
+    font-size: 13px;
+    color: #d4d4d4;
+    background-color: #222;
+    padding: 13px 18px;
+    border: 1px solid #222;
+    transition: color 0.2s, border-color 0.2s, background-color 0.2s;
+    i {
+      font-size: 18px;
+      margin-right: 7px;
+      vertical-align: middle;
+    }
+    &:hover, &:active {
+      color: #fff;
+      background-color: #191919;
+      border-color: #191919;
+    }
+  }
+}
+
+//////////////////////////////////////////////////////////////////////////////
+// Contact Section
+//////////////////////////////////////////////////////////////////////////////
+
+.section-contact {
+  h2 {
+    font-size: 23px;
+    font-weight: 100;
+    text-align: center;
+    margin-bottom: 20px;
+    &:after {
+      display: block;
+      height: 2px;
+      background-color: $primary-color;
+      content: " ";
+      width: 30px;
+      margin: 0 auto;
+      margin-top: 11px;
+    }
+  }
+}
+.contact-form {
+  width: 25%;
+  margin: 0 auto;
+  input { margin-top: 5px; }
+  input, textarea { width: 100%; }
+  input[type=text], input[type=email], textarea {
+    width: 100%;
+    padding: 7px;
+    border: 1px solid #bbb;
+    margin: 4px 0 10px 0;
+  }
+  input[type=submit] {
+    font-size: 13px;
+    font-family: inherit;
+    color: #fff;
+    background-color: inherit;
+    border: 1px solid $primary-color;
+    background-color: $primary-color;
+    padding: 8px;
+    transition: background-color 0.2s, border-color 0.2s;
+    cursor: pointer;
+    &:hover {
+      background-color: #344d8f;
+      border-color: #344d8f;
+    }
+  }
+  label {
+    margin-top: 20px;
+    font-size: 15px;
+  }
+  textarea {
+    height: 100px;
+    resize: none;
+    font-family: inherit;
+  }
+}
+
+//////////////////////////////////////////////////////////////////////////////
+// Footer
+//////////////////////////////////////////////////////////////////////////////
+
+footer {
+  padding: 25px 0;
+  color: #888;
+  background-color: #222;
+}
+
+.copyright {
+  font-size: 13px;
+  width: 33.33%;
+  align-items: center;
+  justify-content: center;
+}
+
+.social-links {
+  width: 33.33%;
+  font-size: 15px;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  ul {
+    li {
+      display: inline-block;
+      margin-right: 15px;
+      &:last-child { margin: 0; }
+      a {
+        color: inherit;
+        text-decoration: none;
+        font-size: 150%;
+        i {
+          transition: color 0.2s;
+          &:hover, &:active { color: $primary-color; }
+        }
+      }
+    }
+  }
+}
+
+.contact-info {
+  width: 33.33%;
+  font-size: 14px;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: center;
+  & div:first-child { margin-bottom: 10px; }
+}
+
+//////////////////////////////////////////////////////////////////////////////
+// Animations
+//////////////////////////////////////////////////////////////////////////////
+
+.animate {
+  animation-duration: 1s;
+  animation-fill-mode: both;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.fadeIn {
+  animation-name: fadeIn;
+}
+
+//////////////////////////////////////////////////////////////////////////////
+// Media Queries
+//////////////////////////////////////////////////////////////////////////////
+
+@media only screen and (max-width: 1200px) {
+  .row {
+    padding: 0 2%;
+  }
+}
+
+@media only screen and (max-width: 1023px) {
+  section {
+    padding: 60px 0;
+  }
+  .tab-content {
+    width: 100%;
+  }
+  .tab-content img {
+    width: 85%;
+  }
+  .tab-content .infographic {
+    height: auto;
+    width: 55%;
+  }
+  .tab-content .span-1-of-2 {
+    justify-content: center;
+    align-items: center;
+  }
+  .tab-content .copy-container {
+    width: 80%;
+  }
+  .contact-form {
+    width: 30%;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  section {
+    padding: 30px 0;
+  }
+  .row {
+    padding: 0 4%;
+  }
+  .contact-form {
+    width: 50%;
+  }
+  .main-nav {
+    display: none;
+  }
+  .mobile-nav {
+    display: block;
+    color: #333;
+  }
+  .nav-scroll-background {
+    display: block;
+  }
+  .nav {
+    li {
+      display: block;
+      a {
+        &:link, &:visited {
+          display: block;
+        }
+      }
+    }
+  }
+  .about-me-copy {
+    width: 80%;
+  }
+  .tab-content img {
+    width: 100%;
+  }
+  .tab-content .infographic {
+    height: 300px;
+    width: auto;
+  }
+  .tab-content .row {
+    flex-direction: column;
+    padding: 0;
+  }
+  .tab-content .span-1-of-2:first-child {
+    width: 100%;
+    margin-top: 25px;
+  }
+  .tab-content div:first-child .span-1-of-2:first-child {
+    margin-top: 0;
+  }
+  .tab-content .copy-container {
+    width: 100%;
+    margin-top: 15px;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  section {
+    padding: 25px 0;
+  }
+  .nav-scroll-background,
+  .nav,
+  .nav .logo-container,
+  .nav .nav-links {
+    height: 60px;
+  }
+  .nav .logo-container a img {
+    height: 18px;
+  }
+  .ion-navicon {
+    font-size: 175%;
+  }
+  .mobile-nav-links {
+    top: 60px;
+  }
+  header .text-container {
+    width: 70%;
+  }
+  .about-me-copy {
+    width: 100%;
+  }
+  .contact-form {
+    width: 100%;
+  }
+  input[type=submit] {
+    padding: 9px;
+  }
+  footer {
+    padding: 30px;
+  }
+  footer .row {
+    flex-direction: column;
+    align-items: center;
+  }
+  .social-links, .copyright.flex-container, .contact-info {
+    width: 100%;
+    align-items: center;
+  }
+  .social-links, .copyright {
+    margin-bottom: 30px;
+  }
+}
